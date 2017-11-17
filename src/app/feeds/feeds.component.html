@@ -1,0 +1,54 @@
+
+<header class="intro-header">
+    <div class="container">
+      <div class="intro-message">
+        <h1>Report Topics </h1>
+        <h3>Welcome, Nattalie</h3>
+        <hr class="intro-divider">
+      </div>
+    </div>
+  </header>
+  <body>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">FixMeAbac</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+  <section class="content-section-a">
+    <div class="container" *ngFor="let r of report | async ">
+      <div class="row">
+        <div class="col-lg-5 ml-auto">
+          <hr class="section-heading-spacer">
+          <div class="clearfix"></div>
+          <h2 class="section-heading">Topic : {{r.topic}} </h2>
+          <p class="lead">
+              {{r.description}}
+            <a routerLink="detail" routerLinkActive="active"> See detail</a>
+          </p>
+        </div>
+        <div class="col-lg-5 mr-auto">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <div *ngFor="let r of report | async ">
+    {{r.description}}
+    {{r.topic}}
+  </div> -->
+  </body>
+    
+  
+  

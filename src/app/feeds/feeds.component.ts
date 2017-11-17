@@ -5,13 +5,11 @@ import { Observable } from 'rxjs/Observable';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-
+  selector: 'app-feeds',
+  templateUrl: './feeds.component.html',
+  styleUrls: ['./feeds.component.scss']
 })
-
-export class AppComponent {
+export class FeedsComponent implements OnInit {
   title = 'FixMe Abac';
   report: Observable<any[]>;
   constructor(private db: AngularFireDatabase) {
@@ -19,12 +17,11 @@ export class AppComponent {
     console.log(this.report);
   }
 
-  ngInit(){
-    this.fetch();
-  }
-  fetch(){
-    
+  ngOnInit() {
   }
 
 }
+
+
+
 
